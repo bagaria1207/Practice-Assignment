@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="startWorker()">
+    <div>
+        <output id="result">Loading .....</output>
+    </div>
+    <script>
+        var w;
+        var z = "";
+        var count = 0;
+        function startWorker(){
+            if(typeof(Worker)!=="undefined"){
+                if(typeof(w)=="undefined"){
+                    w = new Worker("./table_worker.js");
+                }
+                w.onmessage = function(event){
+                    if(Number(count)==10){
+                        z+="<br>"+event.data+","; 
+                        count = 1;
+                    }
+                    else{
+                        count++;
+                        z+=event.data+",";
+                    }
+                    
+                    if(Number(event.data)==100){
+                        document.getElementById("result").innerHTML = z;
+                    }                       
+                }
+            }
+            else{
+                document.getElementById("result").innerHTML = "Sorry! No web Worker Support.";
+            }
+        }
+    </script>
+</body>
+</html>

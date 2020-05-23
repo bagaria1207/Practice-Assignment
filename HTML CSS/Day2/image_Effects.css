@@ -1,0 +1,28 @@
+.right{
+    background-image: url("./images/bruce1.jpg");
+    background-size: cover;
+    width: 50%;
+    height: inherit;
+    background-repeat: no-repeat;
+    float: right;
+}
+.left{
+    background-image: url("./images/bruce1.jpg");
+    background-size: cover;
+    width: 50%;
+    height: inherit;
+    background-repeat: no-repeat;
+    float: left;
+}
+.row{
+    padding: -10px;
+    height: 800px;
+    width: 100%;
+}
+body{
+    margin: 0;
+}
+/* body{
+    background: url("./images/bruce1.jpg") left top no-repeat, url("./images/bruce1.jpg") right top no-repeat;
+    background-size: 50% auto, 50% auto;
+} */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: teal;
+        }
+        a:hover{
+            color: yellow;
+        }
+        a:active{
+            color: brown;
+        }
+        p::selection{
+            background-color: yellowgreen;
+        }
+        div{
+            height: 250px;
+            width: 250px;
+        }
+        #d1{
+            position: absolute;
+            background-color: tomato;
+            z-index: 1;
+        }
+        #d2{
+            position: relative;
+            background-color: violet;
+            z-index: 2;
+            top: 100px;
+            left: 50px;
+        }
+        #d3{
+            position: relative;
+            background-color: blue;
+            z-index: 3;
+            top: 1px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.vijay.com">LINK 1</a>
+    <p>Some text here...Some text here...Some text here...Some text here...Some text here...
+        Some text here...Some text here...Some text here...Some text here...Some text here...
+        Some text here...Some text here...Some text here...Some text here...Some text here...
+        Some text here...Some text here...Some text here...Some text here...Some text here...Some text here...
+        Some text here...Some text here...Some text here...Some text here...Some text here...
+        Some text here...Some text here...Some text here...Some text here...Some text here...
+        Some text here...Some text here...Some text here...Some text here...
+    </p>
+    <div id="d1">Some text here...</div>
+    <div id="d2">Some text here...</div>
+    <div id="d3">Some text here...</div>
+</body>
+</html>

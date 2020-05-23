@@ -1,0 +1,16 @@
+div.outer{
+    position: static;
+    background: url('./images/html5logo.png');
+    height: 490px;
+    width: 100%;
+}
+div.inner{
+    position: relative;
+    opacity: 0.4;
+    background-color: cadetblue;
+    color: black;
+    height: 300px;
+    width: 300px;
+    left: 500px;
+    top: 100px;
+}  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: auto;
+            width: 105px;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome User</h1>
+    <ul id="item">
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+        <li id="item3">Item 3</li>
+        <li id="item4">Item 4</li>
+        <li id="item5">Item 5</li>
+        <li id="item6">Item 6</li>
+    </ul>
+    <div id="getItem">Your Selection : </div>
+    <script>
+        var list = document.getElementsByTagName("li");
+        for(var i =0;i<list.length;i++){
+            localStorage.setItem(list[i].id, list[i].innerHTML)
+        }
+        for(var i = 0;i<list.length;i++){
+            list[i].addEventListener("click", function(){
+                "<br>"
+                document.getElementById("getItem").innerHTML+=localStorage.getItem(this.id)+"<br>";
+            })
+        }
+    </script>
+    <br><br>
+    <button type="submit">Sign Out</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+header{
+    text-align: center;
+    background-color: blue;
+    padding: 15px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    padding: 10px;
+}
+nav{
+    background-color: gray;
+    padding: 30px;
+}
+.column{
+    float: left;
+    height: 220px;
+}
+.left{
+    background-color: lightgray;
+    width: 33%;
+}
+.middle{
+    text-align: center;
+    width: 33%;
+}
+.right{
+    text-align: center;
+    width: 33%;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+footer{
+    position: relative;
+    text-align: center;
+    background-color: gray;
+    padding: 2px;
+    padding-top: none;
+    font-size: x-large;
+    font-weight: 900;
+}
